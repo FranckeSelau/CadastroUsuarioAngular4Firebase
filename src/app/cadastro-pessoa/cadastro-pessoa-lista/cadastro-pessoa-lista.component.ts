@@ -8,8 +8,9 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./cadastro-pessoa-lista.component.css']
 })
 export class CadastroPessoaListaComponent implements OnInit {
+  
   pessoas: Observable<any[]>;
- 
+  
   constructor(db: AngularFireDatabase) {
     this.pessoas = db.list('pessoas').valueChanges();
     }
